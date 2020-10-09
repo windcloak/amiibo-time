@@ -1,0 +1,49 @@
+// Bootstrap Mixins
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins";
+
+
+// Bootstrap Custom Overrides
+@import 'bootstrap/colors';
+@import 'bootstrap/spacing';
+@import 'bootstrap/body';
+@import 'bootstrap/links';
+@import 'bootstrap/components';
+@import 'bootstrap/typography';
+@import 'bootstrap/buttons';
+@import 'bootstrap/navs';
+@import 'bootstrap/navbar';
+// @import 'bootstrap/carousel';
+// @import 'bootstrap/forms';
+
+// TODO: ADD ADDITIONAL STYLE GROUP OVERRIDES
+// @import 'bootstrap/spinners';
+// @import 'bootstrap/options';
+// @import 'bootstrap/paragraphs';
+// @import 'bootstrap/grid';
+// @import 'bootstrap/tables';
+// @import 'bootstrap/inputs';
+// @import 'bootstrap/forms';
+// @import 'bootstrap/z-index';
+// @import 'bootstrap/dropdowns';
+// @import 'bootstrap/pagination';
+// @import 'bootstrap/jumbotron';
+// @import 'bootstrap/cards';
+// @import 'bootstrap/tooltips';
+// @import 'bootstrap/popovers';
+// @import 'bootstrap/toasts';
+// @import 'bootstrap/badges';
+// @import 'bootstrap/modals';
+// @import 'bootstrap/alerts';
+// @import 'bootstrap/progress';
+// @import 'bootstrap/list-groups';
+// @import 'bootstrap/thumbnails';
+// @import 'bootstrap/figures';
+// @import 'bootstrap/breadcrumbs';
+// @import 'bootstrap/carousel';
+// @import 'bootstrap/close';
+// @import 'bootstrap/code';
+// @import 'bootstrap/utilities';
+// @import 'bootstrap/printing';
+
+@import "~bootstrap/scss/variables";
