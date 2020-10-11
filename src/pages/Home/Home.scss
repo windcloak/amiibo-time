@@ -1,0 +1,24 @@
+@import "~bootstrap/scss/bootstrap";
+
+.dropdown-menu {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+// .card-img-top {
+//     max-height: 300px;
+// }
+
+.card-img-top {
+    width: auto;
+    height: 300px;
+}
+
+.card-columns {
+    @include media-breakpoint-only(md) {
+      column-count: 2;
+    }
+    @include media-breakpoint-only(lg) {
+      column-count: 3;
+    }
+  }

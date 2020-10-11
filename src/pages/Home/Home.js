@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-// import './Home.scss';
+import './Home.scss';
 import axios from "axios";
-import { Row, Col, Container, Card, CardColumns, Dropdown } from "react-bootstrap";
+import { Row, Col, Container, Card, CardColumns, Dropdown, CardDeck } from "react-bootstrap";
 import DropdownButton from "react-bootstrap/DropdownButton";
 
 function Home() {
@@ -47,10 +47,9 @@ function Home() {
   const seriesItem = series.amiibo.map((data, i) => {
     return (
       <Dropdown.Item
-        as="button"
         key={i}
         eventKey={data.name}
-        onChange={(e) => setSeriesTerm(data.name)}
+        onSelect={(e) => setSeriesTerm(data.name)}
       >
         {data.name}
       </Dropdown.Item>
@@ -59,8 +58,8 @@ function Home() {
 
 const amiiboCard = amiibos.amiibo.map((amiibo,i) => {
   return (
-    <Card key={i} className="text-center m-5">
-    <Card.Img variant="top" src={amiibo.image} />
+    <Card key={i} className="text-center border-0 bg-transparent p-5">
+    <Card.Img variant="top" src={amiibo.image}/>
     <Card.Body>
       <Card.Title>{amiibo.character}</Card.Title>
       {/* <Card.Text>Cases {data.cases}</Card.Text> */}
@@ -71,25 +70,23 @@ const amiiboCard = amiibos.amiibo.map((amiibo,i) => {
 
   return (
     <Container>
-      <Row>
+      <Row className="pb-4">
         <Col>
-          <h1>Amiibo</h1>
+          <h1>Amiibo Time</h1>
 
-          <DropdownButton id="dropdown-basic-button" title="Choose Series">
+          <DropdownButton id="dropdown-basic-button" title="Choose Series" boundary="scroll-parent">
             {series && seriesItem}
           </DropdownButton>
 
-          <button onClick={(e) => setSeriesTerm("Super Mario Bros.")}>
-            click me to change
-          </button>
         </Col>
       </Row>
 
       <Row>
-        <Col>
+        <Col className="d-grid justify-content-center">
           <CardColumns>
             { amiiboCard }
           </CardColumns>
+
         </Col>
       </Row>
     </Container>
