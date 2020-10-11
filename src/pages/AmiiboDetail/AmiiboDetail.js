@@ -9,6 +9,7 @@ import {
 } from "react-bootstrap";
 import axios from "axios";
 import "./AmiiboDetail.scss";
+import Loader from "../../shared/components/Loader/Loader";
 
 function AmiiboDetail({ match }) {
   const [amiibo, setAmiibo] = useState({});
@@ -37,6 +38,9 @@ function AmiiboDetail({ match }) {
     <Container fluid>
       <Row className="justify-content-center">
         <Col sm={4}>
+
+<Loader loading={loading} />
+
           <Card className="bg-transparent border-0 py-4">
             <Card.Title>
               <h1 className="pl-5">{amiibo.character}</h1>
