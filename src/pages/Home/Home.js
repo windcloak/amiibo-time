@@ -9,7 +9,7 @@ import {
   CardColumns,
   Form,
 } from "react-bootstrap";
-import DropdownButton from "react-bootstrap/DropdownButton";
+import { Link } from "react-router-dom";
 import PacmanLoader from "react-spinners/PacmanLoader";
 
 function Home() {
@@ -91,13 +91,14 @@ function Home() {
 
   const amiiboCard = amiibos.amiibo.map((amiibo, i) => {
     return (
+      <Link to={`/amiibo/${amiibo.head}${amiibo.tail}`}>
       <Card key={i} className="text-center border-0 bg-transparent p-5">
         <Card.Img variant="top" src={amiibo.image} />
         <Card.Body>
           <Card.Title>{amiibo.character}</Card.Title>
-          {/* <Card.Text>Cases {data.cases}</Card.Text> */}
         </Card.Body>
       </Card>
+      </Link>
     );
   });
 

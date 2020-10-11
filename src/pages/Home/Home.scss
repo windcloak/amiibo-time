@@ -5,14 +5,11 @@
     overflow-y: auto;
 }
 
-// .card-img-top {
-//     max-height: 300px;
-// }
-
 .card-img-top {
-    width: auto;
-    height: 300px;
+  width: auto;
+  height: 300px;
 }
+
 
 .card-columns {
     @include media-breakpoint-only(md) {
