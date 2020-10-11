@@ -36,16 +36,17 @@ function AmiiboDetail({ match }) {
 
   return (
     <Container fluid>
-      <Row className="justify-content-center">
-        <Col sm={4}>
 
 <Loader loading={loading} />
+<Row className="justify-content-center">
+        <Col sm={4}>
 
+      
           <Card className="bg-transparent border-0 py-4">
             <Card.Title>
               <h1 className="pl-5">{amiibo.character}</h1>
             </Card.Title>
-            <Card.Img variant="top" src={amiibo.image} alt={amiibo.character} />
+            <Card.Img variant="top" src={amiibo.image} alt={amiibo.character}/>
             <Card.Body>
             <ListGroup className="list-group-flush border-0">
               <ListGroupItem>
@@ -56,7 +57,7 @@ function AmiiboDetail({ match }) {
               </ListGroupItem>
             </ListGroup>
 
-            <Card.Header>Release Date</Card.Header>
+            <Card.Header><b>Release Date</b></Card.Header>
             <ListGroup variant="flush">
               <ListGroup.Item>NA {amiiboDate.na}</ListGroup.Item>
               <ListGroup.Item>JP {amiiboDate.jp}</ListGroup.Item>
@@ -64,8 +65,11 @@ function AmiiboDetail({ match }) {
               <ListGroup.Item>EU {amiiboDate.eu}</ListGroup.Item>
             </ListGroup>
           </Card.Body></Card>
-        </Col>
-      </Row>
+
+
+</Col>
+</Row>
+
     </Container>
   );
 }

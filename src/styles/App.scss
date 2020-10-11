@@ -4,13 +4,15 @@
 
 body {
     background-color: $tertiary;
+    // color: #22223b;
+    color: $dark-primary;
 }
-
-.c-pointer {
-	cursor: pointer;
-  }  
 
 h1 {
 	color: $secondary;
 	font-family: georgia;
+}
+
+a {
+    color: $dark-secondary;
 }

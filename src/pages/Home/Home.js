@@ -10,10 +10,9 @@ import {
   Form,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import PacmanLoader from "react-spinners/PacmanLoader";
+import Loader from "../../shared/components/Loader/Loader";
 
 function Home() {
-  const [seriesLoading, setSeriesLoading] = useState(true);
   const [loadingAmiibo, setLoadingAmiibo] = useState(true);
   const [searchCharacter, setSearchCharacter] = useState("");
   const [error, setError] = useState(false);
@@ -29,9 +28,7 @@ function Home() {
     axios
       .get(API_SERIES_URL)
       .then((res) => {
-        // console.log(res.data);
         setSeries(res.data);
-        setSeriesLoading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -59,8 +56,9 @@ function Home() {
   // get character
   useEffect(() => {
     
-    if (searchCharacter==="")
+    if (searchCharacter==="") {
       return;
+    }
 
     setLoadingAmiibo(true);
     axios
@@ -92,7 +90,7 @@ function Home() {
   const amiiboCard = amiibos.amiibo.map((amiibo, i) => {
     return (
       <Link to={`/amiibo/${amiibo.head}${amiibo.tail}`}>
-      <Card key={i} className="text-center border-0 bg-transparent p-5">
+      <Card key={i} className="text-center border-0 bg-transparent p-md-5">
         <Card.Img variant="top" src={amiibo.image} />
         <Card.Body>
           <Card.Title>{amiibo.character}</Card.Title>
@@ -155,12 +153,10 @@ function Home() {
 
       <Row>
         <Col className="d-grid justify-content-center">
-          <PacmanLoader
-            css={override}
-            size={25}
-            color={"blue"}
-            loading={loadingAmiibo}
-          />
+
+        <Loader loading={loadingAmiibo} />
+
+        { error && <div className="color-red">This could not be found</div>}
 
           <CardColumns>{amiiboCard}</CardColumns>
         </Col>

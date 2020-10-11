@@ -64,9 +64,12 @@ $colors: map-merge(
   $colors
 );
 
-$primary: #00afb9; // teal
-$secondary: #f28482; // peach
+$primary: #3aa8ad; // teal
+$secondary: #d85957; // peach
 $tertiary: #ffddd2;
+$dark-secondary: #9e2a2b;
+$light-secondary: #cf7d7b; // peach
+$dark-primary: #0f4c5c;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
