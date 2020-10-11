@@ -1,0 +1,9 @@
+@import "./src/styles/App";
+
+.navbar {
+    background-color: $primary;
+}
+
+.navbar-light .navbar-brand {
+    color: $darkteal;
+}

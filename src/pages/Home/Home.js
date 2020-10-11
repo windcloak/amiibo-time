@@ -7,9 +7,7 @@ import {
   Container,
   Card,
   CardColumns,
-  Dropdown,
   Form,
-  Button,
 } from "react-bootstrap";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import PacmanLoader from "react-spinners/PacmanLoader";
@@ -112,16 +110,16 @@ function Home() {
 
   return (
     <Container>
-      <Row className="pb-4">
+      <Row className="py-4">
         <Col>
-          <h1>Amiibo Time</h1>
+          <h1 className="text-center">Search for Amiibo</h1>
         </Col>
       </Row>
 
       <Row>
         <Col className="d-flex justify-content-center">
           <Form inline>
-            <Form.Label onSubmit={ (e) => setSearchCharacter(e.target.items.character.value)}
+            <Form.Label
               className="my-1 mr-2"
               htmlFor="inlineFormCustomSelectPref"
             >
@@ -147,9 +145,9 @@ function Home() {
               required
             />
 
-           <Button type="submit" className="my-1">
+           {/* <Button type="submit" className="my-1">
               Submit
-            </Button> 
+            </Button>  */}
           </Form>
         </Col>
       </Row>
@@ -159,7 +157,7 @@ function Home() {
           <PacmanLoader
             css={override}
             size={25}
-            color={"gold"}
+            color={"blue"}
             loading={loadingAmiibo}
           />
 

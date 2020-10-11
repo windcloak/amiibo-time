@@ -1,3 +1,16 @@
 @import 'variables';
 @import 'mixins';
 // @import "~bootstrap/scss/bootstrap";
+
+body {
+    background-color: $tertiary;
+}
+
+.c-pointer {
+	cursor: pointer;
+  }  
+
+h1 {
+	color: $peach;
+	font-family: georgia;
+}
