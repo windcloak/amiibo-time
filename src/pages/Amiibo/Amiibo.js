@@ -48,7 +48,7 @@ function Amiibo() {
         <Col sm={6}>
           <h1 className="py-3">What Are Amiibo?</h1>
           <p>
-            Amiibo are figures Nintendo made that can be used in game. You can
+            Amiibo are toys that Nintendo made that can be used in game. You can
             scan them into games to get bonuses, such as new outfits and
             power-ups. They can come in the form of cards or figures.
           </p>
