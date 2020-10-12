@@ -4,10 +4,13 @@
     background-color: $primary;
 }
 
-.navbar-light .navbar-brand {
-    color: $darkteal;
-}
+.navbar-light {
+    .navbar-brand {
+        color: $darkteal;
+    }
 
-.navbar-light .navbar-toggler {
-    border-color: $dark-primary;
+    .navbar-toggler {
+        border-color: $dark-primary;
+    }
+
 }
