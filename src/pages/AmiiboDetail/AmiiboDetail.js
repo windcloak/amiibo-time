@@ -45,7 +45,7 @@ function AmiiboDetail({ match }) {
           {error && <div>Sorry, seems like something broke</div>}
 
 
-          <Card className="bg-transparent border-0 py-4">
+          <Card className="bg-transparent border-0 py-4 px-3">
             <Card.Title>
               <h1 className="pl-5 pb-2">{amiibo.character}</h1>
             </Card.Title>
