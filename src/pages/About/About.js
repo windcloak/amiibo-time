@@ -9,13 +9,13 @@ function About() {
       <Row className="justify-content-center">
         <Col sm={6}>
           <h1 className="py-4">About Website</h1>
-          <p>This website was developed by May Guo</p>
+          <p>Amiibo Time was developed by May Guo</p>
           <p>
             It uses React JS as the framework and several 3rd party libraries
-            like Bootstrap. This is my first React app.
+            like Bootstrap.
           </p>
           <p>
-            It also utilizes the{" "}
+            This website uses the{" "}
             <a
               href="https://www.amiiboapi.com/"
               target="_blank"
