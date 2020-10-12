@@ -21,6 +21,7 @@ function AmiiboDetail({ match }) {
   const [loading, setLoading] = useState(true);
 
   const API_URL = `https://www.amiiboapi.com/api/amiibo/?id=${match.params.id}`;
+  window.scroll(0, 0);
 
   useEffect(() => {
     axios
