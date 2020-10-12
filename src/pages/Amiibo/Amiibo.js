@@ -63,7 +63,7 @@ function Amiibo() {
             controller to scan it in.
           </p>
           <figure class="figure">
-          <Image src={AmiiboImg} rounded fluid  alt="Scanning amiibo into controller" />
+          <Image src={AmiiboImg} rounded fluid alt="Scanning amiibo into controller" />
           </figure>
           <figcaption class="figure-caption">
             Scanning Daisy amiibo with Pro Controller

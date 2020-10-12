@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col, Container, ListGroup } from "react-bootstrap";
 import "./About.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Logo from "../../assets/icons/logo.svg";
 
 function About() {
   return (
@@ -9,10 +10,16 @@ function About() {
       <Row className="justify-content-center px-2">
         <Col sm={6}>
           <h1 className="py-4">About Website</h1>
+
+          <figure class="figure">
+            <img src={Logo} height="100" alt="Amiibo Time Logo" />
+          </figure>
+          <figcaption class="figure-caption">Amiibo Time Logo</figcaption>
+
           <p>Amiibo Time was developed by May Guo</p>
           <p>
             It uses React JS as the framework and several 3rd party libraries
-            like Bootstrap.
+            like Bootstrap. The logo was made in Figma.
           </p>
           <p>
             This website uses the{" "}

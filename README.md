@@ -1,97 +1,47 @@
-## React Template
+# Amiibo Time
 
-This is a React template. I've included some basic libraries and have SCSS set for styling. 
+Amiibo Time is a responsive web app that displays amiibo from the [Amiibo API](https://www.amiiboapi.com/). It uses React JS as the framework and several 3rd party libraries.
 
-# Standard Third-Party Libraries
+## [Live](https://amiibo-time.web.app/)
+![Demo of App](/src/assets/img/demo.png)
+Format: ![Mobile view]
+
+## Third-Party Libraries
 
 - react-router-dom
 - axios
-- Jquery
-- popperjs/core
-- react-bootstrap
-- bootstrap
+- react-bootstrap, bootstrap
+  - Jquery, popperjs/core (bootstrap dependencies)
 - fontawesome-free
+  - svg-core, free-brands, free-regular, free-solid
+- react-lazyload
+- react-router-dom
+- react-scroll-up
+- react-spinners
 
-I have imported specific parts from Bootstrap as opposed to the whole library. It will be easy to change one variable.
+## API Source and React Hooks
 
-Template was made in React 16.13.1
+The data is from the [Amiibo API](https://www.amiiboapi.com/)
 
-# Preview
+I am using React hooks, useState and useEffect to retrieve and handle the data. Every time user changes the series, useEffect will call on the API to load the series. Same thing for searching for a character.
 
-<img src="src/assets/preview.png">
+## Features
 
-# How to Use
-Click `Use this Template` button to generate a new repo with this one as the template.
+### Caching
+I am using React's service worker to cache files, so if the user reloads a page they already loaded, it won't have to pull the data from the API again.
 
-# npm
+### Lazy Loading
 
-Run `npm install`
+I am using [react-lazyload](https://github.com/twobin/react-lazyload) to lazy load the images as the user scrolls. This way, images that are not in the viewport will not be loaded, which reduces server load.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Scroll to Top
 
-## Available Scripts
+I am using [react-scroll-up](https://github.com/milosjanda/react-scroll-up) button so that when the user scrolls down enough, there will be a button they can press to go to the top. Very important for long pages like the Home page! The icon is from Font Awesome.
 
-In the project directory, you can run:
+### Responsiveness
 
-### `npm start`
+I am using [react-bootstrap](https://github.com/react-bootstrap/react-bootstrap) and Twitter's Bootstrap to style the site so that it's responsive and pretty.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Hosting
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This app is hosted on Firebase.
