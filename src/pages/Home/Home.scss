@@ -10,10 +10,6 @@
   height: 300px;
 }
 
-.card a {
-  color: purple;
-}
-
 .card-columns {
     @include media-breakpoint-only(md) {
       column-count: 2;
@@ -24,9 +20,10 @@
   }
 
 .form-control, .custom-select {
-  background-color:#e9bbad;
+  background-color:#eec5b8;
+
+  :focus {
+    background-color: #e9bbad;
+  }
 }
 
-.custom-select :active{
-  background-color:#teal;
-}

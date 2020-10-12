@@ -10,12 +10,12 @@ function Header() {
       
 <>
 <Navbar collapseOnSelect expand="lg" variant="light" className="align-items-center">
-  <Navbar.Brand href="/" className="font-weight-bold">Amiibo Time</Navbar.Brand>
+  <Navbar.Brand href="/" className="font-weight-bold" title="Home Page">Amiibo Time</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="mr-auto">
-      <Nav.Link href="/about">About</Nav.Link>
-      <Nav.Link href="/">Amiibo</Nav.Link>
+      <Nav.Link href="/about" title="About Website">About</Nav.Link>
+      <Nav.Link href="/amiibo" title="What are amiibo?">Amiibo</Nav.Link>
     </Nav>
     {/* <Nav>
       <Nav.Link href="#deets">More deets</Nav.Link>

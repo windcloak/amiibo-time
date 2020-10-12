@@ -151,10 +151,10 @@ function Home() {
         </Col>
       </Row>
 
+      <Loader loading={loadingAmiibo} />
+
       <Row>
         <Col className="d-grid justify-content-center">
-
-        <Loader loading={loadingAmiibo} />
 
         { error && <div className="color-red">This could not be found</div>}
 

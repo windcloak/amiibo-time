@@ -8,6 +8,7 @@ import Footer from './shared/Footer/Footer';
 
 import Home from './pages/Home/Home';
 import AmiiboDetail from './pages/AmiiboDetail/AmiiboDetail';
+import Amiibo from './pages/Amiibo/Amiibo';
 import About from './pages/About/About';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
 
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} /> 
+      <Route path="/amiibo" component={Amiibo} /> 
       <Route path="/amiibo/:id" exact component={AmiiboDetail} />
       </Switch>
       <Footer />

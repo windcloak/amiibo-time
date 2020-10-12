@@ -32,7 +32,7 @@ function AmiiboDetail({ match }) {
         setError(true);
         setLoading(false);
       });
-  }, []);
+  }, [API_URL]);
 
   return (
     <Container fluid>
@@ -41,10 +41,11 @@ function AmiiboDetail({ match }) {
 <Row className="justify-content-center">
         <Col sm={4}>
 
+      { error && <div>Sorry, seems like something broke</div>}
       
           <Card className="bg-transparent border-0 py-4">
             <Card.Title>
-              <h1 className="pl-5">{amiibo.character}</h1>
+              <h1 className="pl-5 pb-2">{amiibo.character}</h1>
             </Card.Title>
             <Card.Img variant="top" src={amiibo.image} alt={amiibo.character}/>
             <Card.Body>
