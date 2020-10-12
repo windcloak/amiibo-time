@@ -41,11 +41,11 @@ function AmiiboDetail({ match }) {
   return (
     <Container fluid>
       <Row className="justify-content-center">
-        <Col sm={4}>
+        <Col sm={4} className="pb-5">
           {error && <div>Sorry, seems like something broke</div>}
 
 
-          <Card className="bg-transparent border-0 py-4 px-3">
+          <Card className="bg-transparent border-0 pt-4 px-3">
             <Card.Title>
               <h1 className="pl-5 pb-2">{amiibo.character}</h1>
             </Card.Title>
