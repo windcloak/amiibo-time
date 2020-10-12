@@ -17,7 +17,6 @@ import LazyLoad from 'react-lazyload';
 function Home() {
   const [loadingAmiibo, setLoadingAmiibo] = useState(true);
   const [searchCharacter, setSearchCharacter] = useState("");
-  // const [error, setError] = useState(false);
   const [series, setSeries] = useState({ amiibo: [] });
   const [amiibos, setAmiibos] = useState({ amiibo: [] }); // amiibos by series
   const [seriesTerm, setSeriesTerm] = useState("Super Smash Bros."); // series to show
@@ -34,7 +33,6 @@ function Home() {
       })
       .catch((err) => {
         console.log(err);
-        // setError(true);
       });
   }, []);
 
@@ -50,7 +48,6 @@ function Home() {
       })
       .catch((err) => {
         console.log(err);
-        // setError(true);
       });
   }, [seriesTerm]); // only rerun if series term changes
 
@@ -143,9 +140,6 @@ function Home() {
               required
             />
 
-           {/* <Button type="submit" className="my-1">
-              Submit
-            </Button>  */}
           </Form>
         </Col>
       </Row>
