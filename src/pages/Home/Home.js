@@ -11,11 +11,13 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Loader from "../../shared/components/Loader/Loader";
+import LazyLoad from 'react-lazyload';
+// import LazyImg from "../../assets/img/lazyload.png";
 
 function Home() {
   const [loadingAmiibo, setLoadingAmiibo] = useState(true);
   const [searchCharacter, setSearchCharacter] = useState("");
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
   const [series, setSeries] = useState({ amiibo: [] });
   const [amiibos, setAmiibos] = useState({ amiibo: [] }); // amiibos by series
   const [seriesTerm, setSeriesTerm] = useState("Super Smash Bros."); // series to show
@@ -32,7 +34,7 @@ function Home() {
       })
       .catch((err) => {
         console.log(err);
-        setError(true);
+        // setError(true);
       });
   }, []);
 
@@ -48,7 +50,7 @@ function Home() {
       })
       .catch((err) => {
         console.log(err);
-        setError(true);
+        // setError(true);
       });
   }, [seriesTerm]); // only rerun if series term changes
 
@@ -70,7 +72,7 @@ function Home() {
       })
       .catch((err) => {
         console.log(err);
-        setError(true);
+        // setError(true);
         setLoadingAmiibo(false);
       });
   }, [searchCharacter]); // only rerun if character term changes
@@ -91,7 +93,11 @@ function Home() {
     return (
       <Link to={`/amiibo/${amiibo.head}${amiibo.tail}`}>
       <Card key={i} className="text-center border-0 bg-transparent p-md-5">
+
+      <LazyLoad height={300}>
         <Card.Img variant="top" src={amiibo.image} />
+        </LazyLoad>
+
         <Card.Body>
           <Card.Title>{amiibo.character}</Card.Title>
         </Card.Body>
@@ -100,18 +106,11 @@ function Home() {
     );
   });
 
-  const override = `
-  display: block;
-  margin: 0 auto;
-  border-color: red;
-`;
-
-
   return (
     <Container>
       <Row className="py-4">
         <Col>
-          <h1 className="text-center">Search for Amiibo</h1>
+          <h1 className="text-center">Amiibo Time</h1>
         </Col>
       </Row>
 
@@ -151,12 +150,12 @@ function Home() {
         </Col>
       </Row>
 
-      <Loader loading={loadingAmiibo} />
+
 
       <Row>
         <Col className="d-grid justify-content-center">
 
-        { error && <div className="color-red">This could not be found</div>}
+{ loadingAmiibo && <Loader loading={loadingAmiibo} /> }
 
           <CardColumns>{amiiboCard}</CardColumns>
         </Col>

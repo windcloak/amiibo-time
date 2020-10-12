@@ -1,0 +1,16 @@
+@import "./src/styles/App";
+
+.list-group-item {
+  border: 0;
+  align-items: center;
+  vertical-align: middle;
+
+  &:hover {
+    background-color: $secondary;
+    color: white;
+  }
+}
+
+.list-group-item.active {
+  background-color: $primary;
+}

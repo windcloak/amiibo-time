@@ -9,6 +9,9 @@ import {
 } from "react-bootstrap";
 import axios from "axios";
 import "./AmiiboDetail.scss";
+
+import LazyLoad from "react-lazyload";
+// import LazyImg from "../../assets/img/lazyload.png";
 import Loader from "../../shared/components/Loader/Loader";
 
 function AmiiboDetail({ match }) {
@@ -36,41 +39,50 @@ function AmiiboDetail({ match }) {
 
   return (
     <Container fluid>
-
-<Loader loading={loading} />
-<Row className="justify-content-center">
+      <Row className="justify-content-center">
         <Col sm={4}>
+          {error && <div>Sorry, seems like something broke</div>}
 
-      { error && <div>Sorry, seems like something broke</div>}
-      
+
           <Card className="bg-transparent border-0 py-4">
             <Card.Title>
               <h1 className="pl-5 pb-2">{amiibo.character}</h1>
             </Card.Title>
-            <Card.Img variant="top" src={amiibo.image} alt={amiibo.character}/>
+                                 
+          {loading && <Card.Body><Loader loading={loading} /></Card.Body>}
+
+            <LazyLoad height={300}>
+              <Card.Img
+                variant="top"
+                src={amiibo.image}
+                alt={amiibo.character}
+              />
+            </LazyLoad>
+
             <Card.Body>
-            <ListGroup className="list-group-flush border-0">
-              <ListGroupItem>
-                <b>Amiibo Series:</b> {amiibo.amiiboSeries}
-              </ListGroupItem>
-              <ListGroupItem>
-                <b>Type:</b> {amiibo.type}
-              </ListGroupItem>
-            </ListGroup>
+                
+              <ListGroup className="list-group-flush border-0">
+                <ListGroupItem>
+                  <b>Amiibo Series:</b> {amiibo.amiiboSeries}
+                </ListGroupItem>
+                <ListGroupItem>
+                  <b>Type:</b> {amiibo.type}
+                </ListGroupItem>
+              </ListGroup>
 
-            <Card.Header><b>Release Date</b></Card.Header>
-            <ListGroup variant="flush">
-              <ListGroup.Item>NA {amiiboDate.na}</ListGroup.Item>
-              <ListGroup.Item>JP {amiiboDate.jp}</ListGroup.Item>
-              <ListGroup.Item>AU {amiiboDate.au}</ListGroup.Item>
-              <ListGroup.Item>EU {amiiboDate.eu}</ListGroup.Item>
-            </ListGroup>
-          </Card.Body></Card>
-
-
-</Col>
-</Row>
-
+              <Card.Header>
+                <b>Release Date</b>
+              </Card.Header>
+              <ListGroup variant="flush">
+                <ListGroup.Item>NA {amiiboDate.na}</ListGroup.Item>
+                <ListGroup.Item>JP {amiiboDate.jp}</ListGroup.Item>
+                <ListGroup.Item>AU {amiiboDate.au}</ListGroup.Item>
+                <ListGroup.Item>EU {amiiboDate.eu}</ListGroup.Item>
+              </ListGroup>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
     </Container>
   );
 }

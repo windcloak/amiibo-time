@@ -3,4 +3,8 @@
 .footer {
     background-color: $light-secondary;
     color: black;
+
+    a:hover {
+        color: $dark-secondary;
+    }
 }
