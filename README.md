@@ -3,7 +3,7 @@
 Amiibo Time is a responsive web app that displays amiibo from the [Amiibo API](https://www.amiiboapi.com/). It uses React JS as the framework and several 3rd party libraries.
 
 ## [Live (https://amiibo-time.web.app/)](https://amiibo-time.web.app/) 
-![Demo of App](/src/assets/img/demo.png)
+[<img src="/src/assets/img/demo.png">](https://amiibo-time.web.app/)
 
 ## Third-Party Libraries
 
