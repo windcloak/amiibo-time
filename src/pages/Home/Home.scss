@@ -21,9 +21,8 @@
 
 .form-control, .custom-select {
   background-color:#eec5b8;
-
-  :focus {
-    background-color: #e9bbad;
-  }
 }
 
+.form-control:focus {
+  background-color: #e9bbad;
+}
