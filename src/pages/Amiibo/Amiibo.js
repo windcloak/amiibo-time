@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Container, Image } from "react-bootstrap";
 import "./Amiibo.scss";
 import AmiiboImg from "../../assets/img/pro_controller.jpg";
 
@@ -44,7 +44,7 @@ function Amiibo() {
 
   return (
     <Container fluid>
-      <Row className="justify-content-center">
+      <Row className="justify-content-center px-2">
         <Col sm={6}>
           <h1 className="py-3">What Are Amiibo?</h1>
           <p>
@@ -63,11 +63,7 @@ function Amiibo() {
             controller to scan it in.
           </p>
           <figure class="figure">
-            <img
-              src={AmiiboImg}
-              alt="Scanning amiibo into controller"
-              width="500px"
-            />
+          <Image src={AmiiboImg} rounded fluid  alt="Scanning amiibo into controller" />
           </figure>
           <figcaption class="figure-caption">
             Scanning Daisy amiibo with Pro Controller

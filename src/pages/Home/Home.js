@@ -94,7 +94,7 @@ function Home() {
       <Link to={`/amiibo/${amiibo.head}${amiibo.tail}`}>
       <Card key={i} className="text-center border-0 bg-transparent p-md-5">
 
-      <LazyLoad height={300}>
+      <LazyLoad>
         <Card.Img variant="top" src={amiibo.image} />
         </LazyLoad>
 
@@ -115,7 +115,7 @@ function Home() {
       </Row>
 
       <Row>
-        <Col className="d-flex justify-content-center">
+        <Col className="d-flex justify-content-center pb-5">
           <Form inline>
             <Form.Label
               className="my-1 mr-2"

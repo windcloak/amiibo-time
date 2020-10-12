@@ -51,7 +51,7 @@ function AmiiboDetail({ match }) {
                                  
           {loading && <Card.Body><Loader loading={loading} /></Card.Body>}
 
-            <LazyLoad height={300}>
+            <LazyLoad>
               <Card.Img
                 variant="top"
                 src={amiibo.image}

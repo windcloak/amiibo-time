@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function About() {
   return (
     <Container fluid>
-      <Row className="justify-content-center">
+      <Row className="justify-content-center px-2">
         <Col sm={6}>
           <h1 className="py-4">About Website</h1>
           <p>Amiibo Time was developed by May Guo</p>
