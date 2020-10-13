@@ -96,8 +96,8 @@ function About() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Hong Ly's CoOVID-19 React Tracker
-              </a> - React hooks, API calls, and router
+                Hong Ly's COVID-19 React Tracker Tutorial
+              </a> - React hooks, API calls, router, layout
             </li>
             <li>
               <a
