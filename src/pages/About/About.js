@@ -21,6 +21,7 @@ function About() {
             It uses React JS as the framework and several 3rd party libraries
             like Bootstrap. The logo was made in Figma.
           </p>
+
           <p>
             This website uses the{" "}
             <a
@@ -85,7 +86,41 @@ function About() {
             </ListGroup.Item>
           </ListGroup>
 
-          <h1 className="py-3">Disclaimer</h1>
+<h2 className="py-3">React Resources</h2>
+
+<p>The following tutorials helped me learn React:</p>
+          <ul>
+            <li>
+              <a
+                href="https://www.youtube.com/watch?v=mhA11RJMHEM"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hong Ly's CoOVID-19 React Tracker
+              </a> - React hooks, API calls, and router
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/watch?v=Law7wfdg_ls"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Dev Ed's React Router Tutorial
+              </a> -  how to route detail page
+            </li>
+            <li>
+              <a
+                href="https://learnwithparam.com/blog/learn-react-hooks-by-building-books-search/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Param's book search app
+              </a> - splitting code into components
+            </li>
+          </ul>
+
+
+          <h2 className="py-3">Disclaimer</h2>
           <p className="pb-3">
             Game trademarks and copyrights are properties of their respective
             owners. <br />
