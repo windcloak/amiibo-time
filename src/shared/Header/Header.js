@@ -10,7 +10,7 @@ function Header() {
   return (
       
 <>
-<Navbar collapseOnSelect expand="lg" variant="light" className="align-items-center">
+<Navbar collapseOnSelect expand="lg" variant="light">
   <Navbar.Brand href="/" className="font-weight-bold" title="Home Page">
 
       <img
