@@ -2,6 +2,7 @@ import React from "react";
 import {
   Navbar,
   Nav,
+  Container,
 } from "react-bootstrap";
 import "./Header.scss";
 import Logo from '../../assets/icons/logo.svg';
@@ -11,9 +12,10 @@ function Header() {
       
 <>
 <Navbar collapseOnSelect expand="lg" variant="light">
+  
+<Container className="pl-sm-5">
   <Navbar.Brand href="/" className="font-weight-bold" title="Home Page">
-
-      <img
+  <img
         alt=""
         src={Logo}
         width="50"
@@ -27,10 +29,10 @@ function Header() {
       <Nav.Link href="/about" title="About Website" className="font-weight-bold">About</Nav.Link>
       <Nav.Link href="/amiibo" title="What are amiibo?" className="font-weight-bold">Amiibo</Nav.Link>
     </Nav>
-    {/* <Nav>
-      <Nav.Link href="#deets">More deets</Nav.Link>
-    </Nav> */}
   </Navbar.Collapse>
+
+</Container>
+
 </Navbar>
 </>
 
