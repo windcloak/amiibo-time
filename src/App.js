@@ -35,7 +35,7 @@ function App() {
         <Footer />
         
         <ScrollToTop showUnder={160}>
-          <FontAwesomeIcon icon={faChevronCircleUp} size="3x" />
+          <FontAwesomeIcon icon={faChevronCircleUp} size="2x" />
         </ScrollToTop>
       </div>
     </Router>
