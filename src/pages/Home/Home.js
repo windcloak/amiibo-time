@@ -21,7 +21,7 @@ function Home() {
   const [amiibos, setAmiibos] = useState({ amiibo: [] }); // amiibos by series
   const [seriesTerm, setSeriesTerm] = useState("Super Smash Bros."); // series to show
 
-  const API_SERIES_URL = "https://www.amiiboapi.com/api/amiiboseries";
+  const API_SERIES_URL = "http://www.amiiboapi.com/api/amiiboseries/";
   const API_AMIIBOS_URL = "https://www.amiiboapi.com/api/amiibo/";
 
   // get all series
@@ -42,7 +42,6 @@ function Home() {
     axios
       .get(`${API_AMIIBOS_URL}?amiiboSeries=${seriesTerm}`)
       .then((res) => {
-        console.log(res.data);
         setAmiibos(res.data);
         setLoadingAmiibo(false);
       })
@@ -88,8 +87,8 @@ function Home() {
 
   const amiiboCard = amiibos.amiibo.map((amiibo, i) => {
     return (
-      <Link to={`/amiibo/${amiibo.head}${amiibo.tail}`}>
-      <Card key={i} className="text-center border-0 bg-transparent p-md-5">
+      <Link to={`/amiibo/${amiibo.head}${amiibo.tail}`} key={i}>
+      <Card  className="text-center border-0 bg-transparent p-md-5">
 
       <LazyLoad>
         <Card.Img variant="top" src={amiibo.image} />
